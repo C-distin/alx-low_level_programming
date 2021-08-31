@@ -8,4 +8,4 @@ This repo contains a header file and all other file
 
 Get your :popcorn: ready and
 
-Relax with your :laptop: and a glass of :whiskey:
+Relax with your :computer: and a glass of :beer:
