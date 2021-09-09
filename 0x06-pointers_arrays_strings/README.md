@@ -2,7 +2,7 @@
 
 ## Author
 
-> ### Patrick Annang
+> ### Patrick Annang :ghana:
 
 > Get your :coffee: and :popcorn: and prepare your :computer:
 > for an awsome coding experince
