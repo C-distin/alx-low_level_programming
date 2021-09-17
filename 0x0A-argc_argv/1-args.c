@@ -2,11 +2,12 @@
 #include <stdlib.h>
 
 /**
- * main - 
+ * main - program that prints the number of arguments passed into it
  *
- * @argc:
- * @argv:
- * Return:
+ * @argc: the number of command line arguments
+ * @argv: the array containing the program command line arguments
+ *
+ * Return: Always 0
  */
 
 int main(int argc, char *argv[])
