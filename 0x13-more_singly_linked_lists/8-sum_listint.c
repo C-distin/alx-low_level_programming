@@ -10,17 +10,13 @@
 
 int sum_listint(listint_t *head)
 {
-	listint_t *temp;
-	unsigned int sum, i;
+	int sum = 0;
 
-	temp = head;
-	if (!temp)
-		return (0);
-	sum = 0;
-	for (i = 0; temp != '\0'; i++)
+	while (head)
 	{
-		sum += temp->n;
-		temp = temp->next;
+		sum += head->n;
+		head = head->next;
 	}
+
 	return (sum);
 }
