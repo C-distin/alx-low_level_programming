@@ -1,28 +1,63 @@
 #include "main.h"
 
 /**
- * binary_to_uint - converts binary to unsigned int
- * @b: binary string
- * Return: decimal # or 0 if fails
+ *binary_to_uint-Converts a binary number to unsigned integer.
+ *@b:Pointer to the string of binary digits.
+ *Return:Unsigned integer.
  */
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int i = 0, decimal = 0;
+	int i, j = 0;
+	int n = _strlen(b);
+	unsigned int myint = 0;
 
-	if (b == NULL)
+	if (b == NULL || n == 0)
 		return (0);
-		
-	while (b[i] != '\0')
+	for (i = (n - 1); i >= 0; i--)
 	{
-		if (b[i] != '0' && b[i] != '1')
+		if (b[j] != '0' && b[j] != '1')
 			return (0);
-		decimal <<= 1;
+		if (b[j] == '1')
+			myint += power(2, (i));
+		j++;
+	}
+	return (myint);
+}
 
-		if (b[i] == '1')
-			decimal ^= 1;
-		i++;
+/**
+ *_strlen-Finds the length of a string.
+ *@s:String pointer to the string whose length is to be found.
+ *
+ *Return: returns the length of the string.
+ */
+
+int _strlen(const char *s)
+	{
+		int p = 0;
+/*increment up to when the last character is NULL,\0*/
+		while (*(s + p) != '\0')
+		{
+			p++;
+		}
+		return (p);
 	}
 
-	return (decimal);
+/**
+ *power-Computes base raised to power exponent.
+ *@base:The base number.
+ *@exponent:The power to raise to.
+ *Return:The base power exponent.
+ */
+
+int power(int base, long int exponent)
+{
+	int j;
+	int result = 1;
+
+	for (j = exponent; j > 0; j--)
+	{
+		result = result * base;
+	}
+	return (result);
 }
