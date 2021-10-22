@@ -4,4 +4,4 @@
 
 > * ### Patrick Annang
 
-Get your :pocorn: ready for an awesome coding experience.
+Get your :popcorn: ready for an awesome coding experience.
