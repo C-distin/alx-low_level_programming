@@ -11,28 +11,43 @@
  */
 int main(int argc, char *argv[])
 {
-	char *username;
-	char *key;
-	int i;
+	char key[7], *codex;
+	int len = strlen(argv[1]), i, temp;
 
-	if (argc != 2)
+	codex = "A-CHRDw87lNS0E9B2TibgpnMVys5XzvtOGJcYLU+4mjW6fxqZeF3Qa1rPhdKIouk";
+
+	temp = (len ^ 59) & 63;
+	key[0] = codex[temp];
+
+	temp = 0;
+	for (i = 0; i < len; i++)
+		temp += argv[1][i];
+	key[1] = codex[(temp ^ 79) & 63];
+
+	temp = 1;
+	for (i = 0; i < len; i++)
+		temp *= argv[1][i];
+	key[2] = codex[(temp ^ 85) & 63];
+
+	temp = 0;
+	for (i = 0; i < len; i++)
 	{
-		printf("Usage: %s username\n", argv[0]);
-		return (1);
+		if (argv[1][i] > temp)
+			temp = argv[1][i];
 	}
-	username = argv[1];
-	key = malloc(sizeof(char) * strlen(username) + 1);
-	if (key == NULL)
-	{
-		printf("Error: malloc failed\n");
-		return (1);
-	}
-	for (i = 0; username[i] != '\0'; i++)
-	{
-		key[i] = username[i] + i;
-	}
-	key[i] = '\0';
-	printf("%s\n", key);
-	free(key);
+	srand(temp ^ 14);
+	key[3] = codex[rand() & 63];
+
+	temp = 0;
+	for (i = 0; i < len; i++)
+		temp += (argv[1][i] * argv[1][i]);
+	key[4] = codex[(temp ^ 239) & 63];
+
+	for (i = 0; i < argv[1][0]; i++)
+		temp = rand();
+	key[5] = codex[(temp ^ 229) & 63];
+
+	key[6] = '\0';
+	printf("%s", key);
 	return (0);
 }
