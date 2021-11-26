@@ -9,7 +9,7 @@
  *
  * Return: 0 on success, 1 on failure
  */
-int main(int argc, char *argv[])
+int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	char key[7], *codex;
 	int len = strlen(argv[1]), i, temp;
