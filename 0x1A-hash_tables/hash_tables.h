@@ -42,4 +42,7 @@ hash_table_t *hash_table_create(unsigned long int size);
 /* hash function using djb2 algorithm */
 unsigned long int hash_djb2(const unsigned char *str);
 
+/* hash function to return key index */
+unsigned long int key_index(const unsigned char *key, unsigned long int size);
+
 #endif /* __HASH_TABLES_H__ */
