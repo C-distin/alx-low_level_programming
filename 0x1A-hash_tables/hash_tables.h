@@ -45,4 +45,7 @@ unsigned long int hash_djb2(const unsigned char *str);
 /* hash function to return key index */
 unsigned long int key_index(const unsigned char *key, unsigned long int size);
 
+/* add a new element to the hash table */
+int hash_table_set(hash_table_t *ht, const char *key, const char *value);
+
 #endif /* __HASH_TABLES_H__ */
