@@ -14,7 +14,7 @@ This project is about:
 > `gcc -Wall -pedantic -Werror -Wextra -std=gnu89 *.c -o`
 
 ## More Information
-This project was done using lbetty style
+This project was done using betty style
 
 ## Author
 Patrick Annang

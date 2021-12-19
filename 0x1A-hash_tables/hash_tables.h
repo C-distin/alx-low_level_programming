@@ -7,9 +7,6 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-#define HASH_TABLE_SIZE 100
-#define MAX_NAME 256
-
 /**
  * struct hash_node_s - Node of a hash table
  *
