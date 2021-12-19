@@ -48,4 +48,7 @@ unsigned long int key_index(const unsigned char *key, unsigned long int size);
 /* add a new element to the hash table */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 
+/* function to get a value from a key */
+char *hash_table_get(const hash_table_t *ht, const char *key);
+
 #endif /* __HASH_TABLES_H__ */
