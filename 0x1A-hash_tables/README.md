@@ -15,3 +15,6 @@ This project is about:
 
 ## More Information
 This project was done using lbetty style
+
+## Author
+Patrick Annang
